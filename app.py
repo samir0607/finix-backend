@@ -13,7 +13,7 @@ async def test():
     return {"response": "hello"}
 
 
-# @app.post("/")
-# async def send_message(message: Message):
-#     response_text = chatbot(message.message)
-#     return {"response": response_text}
+@app.post("/")
+async def send_message(message: Message):
+    response_text = chatbot(message.message)
+    return {"response": response_text}
