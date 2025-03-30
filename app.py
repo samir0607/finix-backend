@@ -9,7 +9,7 @@ class Message(BaseModel):
     message: str
 
 
-@app.get("/")
+@app.get("/items")
 async def test():
     return {"response": "hello"}
 
