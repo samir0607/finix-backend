@@ -92,7 +92,7 @@ def predictor(query):
 
 def chatbot(query, category):
 
-    if '1' in category:
+    if category == 1:
         return educator(query)
     else:
         return predictor(query)
