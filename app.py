@@ -9,6 +9,6 @@ class Message(BaseModel):
     category: int
 
 @app.post("/")
-async def send_message(message: Message, category: Message):
-    response_text = chatbot(message.message, category.category)
+async def send_message(message: Message):
+    response_text = chatbot(message.message, message.category)
     return {"response": response_text}
