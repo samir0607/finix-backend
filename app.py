@@ -6,7 +6,7 @@ app = FastAPI()
 
 class Message(BaseModel):
     message: str
-    category: str
+    category: int
 
 @app.post("/")
 async def send_message(message: Message):
