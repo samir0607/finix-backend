@@ -10,5 +10,6 @@ class Message(BaseModel):
 
 @app.post("/")
 async def send_message(message: Message):
+    print(type(message.category))
     response_text = chatbot(message.query, message.category)
     return {"response": response_text}
