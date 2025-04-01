@@ -5,10 +5,10 @@ from chatbot import chatbot
 app = FastAPI()
 
 class Message(BaseModel):
-    message: str
+    query: str
     category: int
 
 @app.post("/")
 async def send_message(message: Message):
-    response_text = chatbot(message.message, message.category)
+    response_text = chatbot(message.query, message.category)
     return {"response": response_text}
